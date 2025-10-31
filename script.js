@@ -13,7 +13,54 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeGallerySlider();
     initializeForm();
     initializeScrollEffects();
+    initializeTypewriter();
 });
+
+// Typewriter Animation
+function initializeTypewriter() {
+    const typewriterElement = document.getElementById('typewriter');
+    const words = ['Kitchen', 'Bathroom', 'Fireplace', 'Flooring', 'Outdoor'];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 150;
+    let deleteSpeed = 100;
+    let pauseTime = 2000;
+
+    function typeEffect() {
+        const currentWord = words[wordIndex];
+        
+        if (isDeleting) {
+            // Apagando
+            typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+            typeSpeed = deleteSpeed;
+            
+            if (charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 150;
+            }
+        } else {
+            // Escrevendo
+            typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+            typeSpeed = 150;
+            
+            if (charIndex === currentWord.length) {
+                isDeleting = true;
+                typeSpeed = pauseTime;
+            }
+        }
+        
+        setTimeout(typeEffect, typeSpeed);
+    }
+    
+    // Começar a animação
+    if (typewriterElement) {
+        typeEffect();
+    }
+}
 
 // Slideshow Hero com efeito Ken Burns
 function initializeSlideshow() {

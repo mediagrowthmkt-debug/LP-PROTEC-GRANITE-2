@@ -160,6 +160,40 @@ body {
     line-height: 1.2;
 }
 
+/* Typewriter Animation */
+.typewriter {
+    color: var(--secondary-color);
+    border-right: 3px solid var(--secondary-color);
+    animation: blink-cursor 1s infinite;
+    min-width: 200px;
+    display: inline-block;
+    text-align: left;
+}
+
+@keyframes blink-cursor {
+    0%, 50% {
+        border-color: var(--secondary-color);
+    }
+    51%, 100% {
+        border-color: transparent;
+    }
+}
+
+/* Responsive ajustes para typewriter */
+@media (max-width: 768px) {
+    .typewriter {
+        min-width: 150px;
+        border-right-width: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .typewriter {
+        min-width: 120px;
+        border-right-width: 2px;
+    }
+}
+
 .hero-subtitle {
     font-size: 1.8rem;
     margin-bottom: 15px;
@@ -1135,6 +1169,11 @@ body {
         gap: 15px;
     }
     
+    /* Ajuste para evitar sobreposição do header no mobile */
+    .hero-section {
+        padding-top: 80px;
+    }
+    
     .hero-title {
         font-size: 2.5rem;
     }
@@ -1310,6 +1349,11 @@ body {
 }
 
 @media (max-width: 480px) {
+    /* Ajuste adicional para dispositivos móveis pequenos */
+    .hero-section {
+        padding-top: 90px;
+    }
+    
     .hero-title {
         font-size: 2rem;
     }
