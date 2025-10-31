@@ -1171,7 +1171,11 @@ body {
     
     /* Ajuste para evitar sobreposição do header no mobile */
     .hero-section {
-        padding-top: 80px;
+        padding-top: 120px;
+    }
+    
+    .hero-content {
+        padding-top: 20px;
     }
     
     .hero-title {
@@ -1351,7 +1355,11 @@ body {
 @media (max-width: 480px) {
     /* Ajuste adicional para dispositivos móveis pequenos */
     .hero-section {
-        padding-top: 90px;
+        padding-top: 130px;
+    }
+    
+    .hero-content {
+        padding-top: 30px;
     }
     
     .hero-title {
