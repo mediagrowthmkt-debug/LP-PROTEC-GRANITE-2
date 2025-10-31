@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Stone Countertops | Mobile Showroom | Protec Premium Granite</title>
+    <meta name="description" content="Choose your granite, marble, or quartz without leaving home. We bring our full showroom to your door with 3D preview and same-day estimate. 7-day installation guarantee.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <img src="LOGO/logomarca-protec.png" alt="Protec Premium Granite" class="logo">
+        </div>
+    </header>
+
+    <!-- BLOCO 1 - HERO SLIDESHOW (ATTENTION) -->
+    <section class="hero-section" id="hero">
+        <div class="hero-slideshow">
+            <div class="slide active" style="background-image: url('BLOCO 1 - Hero slideshow com overlay escuro e efeito de zoom suave (Ken Burns)/slide-001.jpg')"></div>
+            <div class="slide" style="background-image: url('BLOCO 1 - Hero slideshow com overlay escuro e efeito de zoom suave (Ken Burns)/slide-002.jpg')"></div>
+            <div class="slide" style="background-image: url('BLOCO 1 - Hero slideshow com overlay escuro e efeito de zoom suave (Ken Burns)/3.jpg')"></div>
+            <div class="slide" style="background-image: url('BLOCO 1 - Hero slideshow com overlay escuro e efeito de zoom suave (Ken Burns)/car-protec-e1761872246984.jpg')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">Your dream kitchen starts with premium stone.</h1>
+                <p class="hero-subtitle">Choose your granite, marble, or quartz — without leaving home.</p>
+                <p class="hero-description">We bring our full showroom to your door, with 3D preview and same-day estimate.</p>
+                <div class="hero-features">
+                    <span class="feature">⭐ 4.9/5 Rated</span>
+                    <span class="feature">🕒 7-day installation</span>
+                    <span class="feature">👨‍👩‍👧 Family owned & operated</span>
+                </div>
+                <button class="cta-button hero-cta" onclick="scrollToForm()">Get Your Free Estimate Today</button>
+                <p class="hero-arrow">Get your free quote today ⬇️</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCO 2 - MOBILE SHOWROOM BENEFIT (INTEREST) -->
+    <section class="mobile-showroom-section" id="mobile-showroom">
+        <div class="container">
+            <div class="row">
+                <div class="col-left">
+                    <h2 class="section-title">Tired of wasting weekends visiting showrooms?</h2>
+                    <p class="section-text">Choosing the right stone shouldn't be stressful. Most companies make you drive from store to store, wait weeks for estimates, and hope the stone looks right in your home.</p>
+                    <p class="section-text highlight">At Protec, we flipped the process: our showroom comes to you — complete with samples, 3D preview, and same-day estimate.</p>
+                    <div class="benefits-grid">
+                        <div class="benefit">
+                            <span class="benefit-icon">🚐</span>
+                            <span class="benefit-text">Mobile Showroom</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="benefit-icon">🖥️</span>
+                            <span class="benefit-text">3D Visualization</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="benefit-icon">📄</span>
+                            <span class="benefit-text">Same-Day Estimate</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="benefit-icon">🕒</span>
+                            <span class="benefit-text">7-Day Installation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-right">
+                    <!-- Photo Gallery Slider -->
+                    <div class="photo-gallery-slider">
+                        <div class="gallery-container">
+                            <div class="gallery-slide active">
+                                <img src="SLIDE DE FOTOS/539186488_122105963456988135_8534306731821448033_n.jpg" alt="Protec Work Gallery 1">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="SLIDE DE FOTOS/559681728_122120476082988135_8808361279988812690_n.jpg" alt="Protec Work Gallery 2">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="SLIDE DE FOTOS/561142554_122121462530988135_6717677738748677763_n.jpg" alt="Protec Work Gallery 3">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="SLIDE DE FOTOS/565732040_122122235450988135_7386895601486472683_n.jpg" alt="Protec Work Gallery 4">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="SLIDE DE FOTOS/569381684_122123502824988135_6238344627905708577_n.jpg" alt="Protec Work Gallery 5">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="SLIDE DE FOTOS/unnamed.webp" alt="Protec Work Gallery 6">
+                            </div>
+                        </div>
+                        <div class="gallery-navigation">
+                            <button class="gallery-btn prev" onclick="changeGallerySlide(-1)">‹</button>
+                            <button class="gallery-btn next" onclick="changeGallerySlide(1)">›</button>
+                        </div>
+                        <div class="gallery-dots">
+                            <span class="gallery-dot active" onclick="currentGallerySlide(1)"></span>
+                            <span class="gallery-dot" onclick="currentGallerySlide(2)"></span>
+                            <span class="gallery-dot" onclick="currentGallerySlide(3)"></span>
+                            <span class="gallery-dot" onclick="currentGallerySlide(4)"></span>
+                            <span class="gallery-dot" onclick="currentGallerySlide(5)"></span>
+                            <span class="gallery-dot" onclick="currentGallerySlide(6)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCO 3 - PRODUCTS SHOWCASE (DESIRE) -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2 class="section-title centered">From vision to installation — fast, precise, and stress-free.</h2>
+            <p class="section-text centered white-text">Imagine seeing your new kitchen come to life before you even choose the stone. Our 3D visualization and mobile showroom make it simple to pick the perfect match. With our 7-day delivery and family-style care, your home transformation is closer than you think.</p>
+            
+            <div class="features-list">
+                <div class="feature-item">✅ Free mobile showroom visit</div>
+                <div class="feature-item">✅ 3D preview in your home</div>
+                <div class="feature-item">✅ Same-day quote</div>
+                <div class="feature-item">✅ Installation in 7 business days</div>
+                <div class="feature-item">✅ Dedicated post-installation support</div>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="BLOCO 3. focar no desejo mostrar os produtos da PROTEC/PROJECTS/Kitchen Countertops/Kitchen Countertops.webp" alt="Kitchen Countertops" class="product-image">
+                    <h3 class="product-title">Kitchen Countertops</h3>
+                    <p class="product-description">Transform your kitchen with premium granite, marble, or quartz countertops</p>
+                </div>
+                <div class="product-card">
+                    <img src="BLOCO 3. focar no desejo mostrar os produtos da PROTEC/PROJECTS/Bathroom Vanities/Bathroom Vanities.webp" alt="Bathroom Vanities" class="product-image">
+                    <h3 class="product-title">Bathroom Vanities</h3>
+                    <p class="product-description">Elegant stone vanities that elevate your bathroom design</p>
+                </div>
+                <div class="product-card">
+                    <img src="BLOCO 3. focar no desejo mostrar os produtos da PROTEC/PROJECTS/Fireplace Surrounds/Fireplace Surrounds.webp" alt="Fireplace Surrounds" class="product-image">
+                    <h3 class="product-title">Fireplace Surrounds</h3>
+                    <p class="product-description">Stunning stone fireplace surrounds for a luxurious focal point</p>
+                </div>
+                <div class="product-card">
+                    <img src="BLOCO 3. focar no desejo mostrar os produtos da PROTEC/PROJECTS/Custom Fabrication & Installation/Custom Fabrication & Installation .webp" alt="Custom Fabrication & Installation" class="product-image">
+                    <h3 class="product-title">Custom Fabrication</h3>
+                    <p class="product-description">Precision custom stone fabrication and professional installation services</p>
+                </div>
+                <div class="product-card">
+                    <img src="BLOCO 3. focar no desejo mostrar os produtos da PROTEC/PROJECTS/Flooring & Wall Cladding/Flooring & Wall Cladding.webp" alt="Flooring & Wall Cladding" class="product-image">
+                    <h3 class="product-title">Flooring & Wall Cladding</h3>
+                    <p class="product-description">Premium stone flooring and wall cladding for complete home transformation</p>
+                </div>
+                <div class="product-card">
+                    <img src="BLOCO 3. focar no desejo mostrar os produtos da PROTEC/PROJECTS/Outdoor Kitchens & BBQ Areas/Outdoor Kitchens & BBQ Areas.webp" alt="Outdoor Kitchens" class="product-image">
+                    <h3 class="product-title">Outdoor Kitchens</h3>
+                    <p class="product-description">Weather-resistant stone surfaces for your outdoor entertaining space</p>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <p class="testimonial-text">"They brought everything to my house! I saw the stones, got my quote, and my kitchen was ready in a week."</p>
+                <p class="testimonial-author">– Sarah P., Peabody MA</p>
+            </div>
+
+            <!-- Google Reviews Section -->
+            <div class="google-reviews">
+                <div class="reviews-header">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/120px-Google_%22G%22_logo.svg.png" alt="Google" class="google-logo">
+                    <div class="reviews-rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="rating-text">4.9/5 Rating</span>
+                    </div>
+                </div>
+                
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="reviews do google.rtfd/AMBA38tA1lkJX-Tf3DaMVVPDSJ2vDbJc3TisRrlgBK8qKFKo8cg82_P_167USwtkRfNUdsK0EuY6fIWUhYtWour6UVP0cabbfilBeD7xoTtvlJcR99lhj6IfNrVgq6ml1dTTTGfJ7ddUlqMNdRdz=s225-p-k-rw.webp" alt="Julio Joao" class="reviewer-avatar">
+                            <div class="reviewer-info">
+                                <h4 class="reviewer-name">Julio Joao</h4>
+                                <div class="review-stars">★★★★★</div>
+                                <span class="review-date">2 months ago</span>
+                            </div>
+                        </div>
+                        <p class="review-text">"I just have to thank and congratulate Protec for the excellence they achieved in installing the countertop and island in our kitchen. I highly recommend them, the team is organized, punctual on the delivery date and careful to protect the floor of the house."</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="reviews do google.rtfd/AMBA38vtMc4TJOsS_uBNRU-RkHhThPCVEku9CTpWX_rxTo0Cm0mO2L3H9zV3fgfk3Z-n1bIaedNT9-F5Jca6pb7Zug-rer-kB8_rGlpwIjojHyfHcgjWcElaqBXCfjIc492RkG5TeJf1Hkc6Qd6C=s225-p-k-rw.webp" alt="Claudete Lummertz" class="reviewer-avatar">
+                            <div class="reviewer-info">
+                                <h4 class="reviewer-name">Claudete Lummertz</h4>
+                                <div class="review-stars">★★★★★</div>
+                                <span class="review-date">2 months ago</span>
+                            </div>
+                        </div>
+                        <p class="review-text">"I hired this company to install marble in my bathroom and was very pleased. The service was meticulous, on time, and with impeccable finishes. The service was attentive and professional. I highly recommend it!"</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="reviews do google.rtfd/AMBA38vqDHm3rChmE9lHYj3X6hKBvUMxrJZDBiVhntmp3m8wdxIGfJPAr1rwwTYuPZwkYqXEUa-REJwHyeWbB7jk4-GJjQwreOZMvxIbeKp8qH1NT4jSCXpKH7gpv3c6rZr9mNrWZN74IPvvQaYI=s225-p-k-rw.webp" alt="Carolina Mendes" class="reviewer-avatar">
+                            <div class="reviewer-info">
+                                <h4 class="reviewer-name">Carolina Mendes</h4>
+                                <div class="review-stars">★★★★★</div>
+                                <span class="review-date">2 months ago</span>
+                            </div>
+                        </div>
+                        <p class="review-text">"Amazing professional and service!! They renovated a whole kitchen for us, excellent finish!! Definitely would recommend!! Thank you guys for all!!"</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="reviews do google.rtfd/AMBA38t5szqVXdpxXzjwNS3M7s3_pzKnzGBZL1VjyWjp3EUVQmDHOhB66Zf7uLHGYN7eeomWrHu_9SB_h7b_C077NxCJOECTzI2-21wXxnMwuEpCBv--eAUdDSc_C4l-q-DZF8Bs24-COYZvmDRD=s225-p-k-rw.webp" alt="Rafaela Herzog" class="reviewer-avatar">
+                            <div class="reviewer-info">
+                                <h4 class="reviewer-name">Rafaela Herzog</h4>
+                                <div class="review-stars">★★★★★</div>
+                                <span class="review-date">1 month ago</span>
+                            </div>
+                        </div>
+                        <p class="review-text">"We contacted Protec Premium Granite after we had an issue with the company that previously installed our backsplash. They were prompt to solve the issue, had amazing communication, showed up on time and easily fixed the problem. I'm very happy with this company ⭐⭐⭐⭐⭐"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-center">
+                <button class="cta-button products-cta" onclick="scrollToForm()">Book Your Free In-Home Consultation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCO 4 - VIDEOS SECTION -->
+    <section class="videos-section" id="videos">
+        <div class="container">
+            <h2 class="section-title centered white-text">See Our Mobile Showroom in Action</h2>
+            
+            <!-- MOBILE VERSION - Carousel -->
+            <div class="video-carousel-wrapper mobile-only">
+                <div class="video-frame">
+                    <div class="video-container active" data-video-index="0">
+                        <video class="carousel-video" preload="metadata" playsinline>
+                            <source src="BLOCO 4 - VIDEOS/1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button type="button" class="video-overlay" onclick="toggleMobileVideo(0)">
+                            <span class="play-button">▶</span>
+                        </button>
+                    </div>
+                    <div class="video-container" data-video-index="1">
+                        <video class="carousel-video" preload="metadata" playsinline>
+                            <source src="BLOCO 4 - VIDEOS/2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button type="button" class="video-overlay" onclick="toggleMobileVideo(1)">
+                            <span class="play-button">▶</span>
+                        </button>
+                    </div>
+                    <div class="video-container" data-video-index="2">
+                        <video class="carousel-video" preload="metadata" playsinline>
+                            <source src="BLOCO 4 - VIDEOS/3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button type="button" class="video-overlay" onclick="toggleMobileVideo(2)">
+                            <span class="play-button">▶</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="video-navigation">
+                    <button class="nav-btn prev" onclick="changeVideo(-1)">‹</button>
+                    <button class="nav-btn next" onclick="changeVideo(1)">›</button>
+                </div>
+                <div class="video-dots">
+                    <span class="dot active" onclick="currentVideo(1)"></span>
+                    <span class="dot" onclick="currentVideo(2)"></span>
+                    <span class="dot" onclick="currentVideo(3)"></span>
+                </div>
+            </div>
+            
+            <!-- DESKTOP VERSION - 3 Separate Videos -->
+            <div class="desktop-videos-grid desktop-only">
+                <div class="desktop-video-item">
+                    <div class="desktop-video-container">
+                        <video class="desktop-video" preload="metadata" playsinline>
+                            <source src="BLOCO 4 - VIDEOS/1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button type="button" class="desktop-video-overlay" onclick="toggleDesktopVideo(0)">
+                            <span class="desktop-play-button">▶</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="desktop-video-item">
+                    <div class="desktop-video-container">
+                        <video class="desktop-video" preload="metadata" playsinline>
+                            <source src="BLOCO 4 - VIDEOS/2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button type="button" class="desktop-video-overlay" onclick="toggleDesktopVideo(1)">
+                            <span class="desktop-play-button">▶</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="desktop-video-item">
+                    <div class="desktop-video-container">
+                        <video class="desktop-video" preload="metadata" playsinline>
+                            <source src="BLOCO 4 - VIDEOS/3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button type="button" class="desktop-video-overlay" onclick="toggleDesktopVideo(2)">
+                            <span class="desktop-play-button">▶</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCO 5 - FORM SECTION (ACTION) -->
+    <section class="form-section" id="contact-form">
+        <div class="container">
+            <h2 class="section-title centered">Ready to choose your perfect stone?</h2>
+            <p class="section-text centered white-text">Your dream kitchen is just one visit away. Schedule your free in-home consultation today and see your new countertop in 3D — right where it will be installed.</p>
+            
+            <form class="contact-form" id="leadForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">🧍 Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">📞 Phone *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">📧 Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="area">Which area of your home are you planning to upgrade? *</label>
+                    <div class="area-selector">
+                        <div class="area-option">
+                            <input type="radio" name="area" value="Kitchen" id="area-kitchen">
+                            <label for="area-kitchen" class="area-label">Kitchen</label>
+                        </div>
+                        <div class="area-option">
+                            <input type="radio" name="area" value="Bathroom" id="area-bathroom">
+                            <label for="area-bathroom" class="area-label">Bathroom</label>
+                        </div>
+                        <div class="area-option">
+                            <input type="radio" name="area" value="Fireplace" id="area-fireplace">
+                            <label for="area-fireplace" class="area-label">Fireplace</label>
+                        </div>
+                        <div class="area-option">
+                            <input type="radio" name="area" value="Outdoor" id="area-outdoor">
+                            <label for="area-outdoor" class="area-label">Outdoor</label>
+                        </div>
+                        <div class="area-option">
+                            <input type="radio" name="area" value="Other" id="area-other">
+                            <label for="area-other" class="area-label">Other</label>
+                        </div>
+                    </div>
+                    <input type="text" id="other-specify" name="other_specify" placeholder="Please specify..." style="display: none; margin-top: 15px;">
+                </div>
+                <button type="submit" class="cta-button form-submit">Get My Free Estimate</button>
+                <p class="form-disclaimer">✅ No obligation | Free consultation | Fast response</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- BLOCO 6 - TRUST & PORTFOLIO -->
+    <section class="trust-section" id="trust">
+        <div class="container">
+            <h2 class="section-title centered">Why homeowners trust Protec Premium Granite</h2>
+            <div class="trust-features">
+                <div class="trust-item">
+                    <span class="trust-icon">🏆</span>
+                    <span class="trust-text">7-day installation guarantee</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">🧱</span>
+                    <span class="trust-text">Over 200 kitchens installed across Massachusetts</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">👨‍👩‍👧</span>
+                    <span class="trust-text">Family-owned business</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">💬</span>
+                    <span class="trust-text">Bilingual team (English & Portuguese)</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">📍</span>
+                    <span class="trust-text">Serving all Massachusetts & New England</span>
+                </div>
+            </div>
+            <div class="portfolio-gallery">
+                <img src="BLOCO 6 - MORE PORTIFOLIO/12.jpg" alt="Portfolio Example 1" class="portfolio-image">
+                <img src="BLOCO 6 - MORE PORTIFOLIO/1761333615116_1.png" alt="Portfolio Example 2" class="portfolio-image">
+            </div>
+            <div class="final-cta">
+                <button class="cta-button final-cta-btn" onclick="scrollToForm()">Schedule Your Mobile Showroom Visit</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <img src="LOGO/logomarca-protec.png" alt="Protec Premium Granite" class="footer-logo">
+            <p class="footer-text">Premium stone countertops with mobile showroom service across Massachusetts & New England</p>
+            <p class="footer-contact">📞 Call for immediate assistance | 📧 Email us for quotes</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
