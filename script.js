@@ -440,14 +440,15 @@ function showSuccess(message) {
 }
 
 // Submeter formulário
-function submitForm() {
+async function submitForm() {
     const submitButton = document.querySelector('.form-submit');
     const originalText = submitButton.textContent;
-    
+    const webhookUrl = 'https://hook.us2.make.com/242i9bj1u4f5jn9z4n8tp6fn7s128bn8';
+
     // Mostrar loading
     submitButton.textContent = 'Sending...';
     submitButton.disabled = true;
-    
+
     // Coletar dados do formulário
     const formData = {
         name: document.getElementById('name').value.trim(),
@@ -455,34 +456,92 @@ function submitForm() {
         email: document.getElementById('email').value.trim(),
         area: document.querySelector('input[name="area"]:checked').value,
         other_specify: document.getElementById('other-specify').value.trim(),
+    };
+
+    // Metadados da página (fonte/link)
+    const pageMeta = {
+        page_url: window.location.href,
+        page_path: window.location.pathname + window.location.search,
+        page_title: document.title,
+        referrer: document.referrer || '',
+        user_agent: navigator.userAgent,
         timestamp: new Date().toISOString(),
         source: 'Landing Page - Premium Granite',
         utm_source: getUrlParameter('utm_source') || 'direct',
         utm_medium: getUrlParameter('utm_medium') || 'website',
         utm_campaign: getUrlParameter('utm_campaign') || 'granite-landing'
     };
-    
-    // Simular envio (aqui você integraria com seu backend)
-    setTimeout(() => {
-        console.log('Form Data:', formData);
-        
-        // Enviar evento para Google Analytics se disponível
-        if (typeof gtag !== 'undefined') {
+
+    const payload = { ...formData, ...pageMeta };
+
+    // Funções de envio
+    const sendJson = () => fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        mode: 'cors',
+        keepalive: true
+    });
+
+    const sendFormNoCors = () => {
+        const fd = new FormData();
+        Object.keys(payload).forEach(key => {
+            const value = payload[key];
+            fd.append(key, typeof value === 'object' ? JSON.stringify(value) : String(value));
+        });
+        return fetch(webhookUrl, {
+            method: 'POST',
+            body: fd,
+            mode: 'no-cors',
+            keepalive: true
+        });
+    };
+
+    let sent = false;
+    try {
+        const resp = await sendJson();
+        // Se CORS bloquear, resp pode ser 'opaque' em alguns casos; considerar como enviado
+        sent = !!resp && (resp.ok || resp.type === 'opaque');
+    } catch (err) {
+        console.warn('JSON webhook send failed, trying no-cors FormData:', err);
+    }
+
+    if (!sent) {
+        try {
+            await sendFormNoCors();
+            sent = true;
+        } catch (err2) {
+            console.error('Fallback no-cors send failed:', err2);
+        }
+    }
+
+    // Enviar evento para Google Analytics se disponível
+    if (typeof gtag !== 'undefined') {
+        try {
             gtag('event', 'form_submit', {
                 event_category: 'engagement',
                 event_label: 'lead_form_submission'
             });
-            
-            // Track conversion
             gtag('event', 'conversion', {
                 'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL'
             });
+        } catch (e) {
+            // ignore
         }
-        
-        // Redirecionar para página de agradecimento
+    }
+
+    // Redirecionar independentemente do resultado (para boa UX)
+    setTimeout(() => {
         window.location.href = 'thank-you.html';
-        
-    }, 1500); // 1.5 segundos para simular processamento
+    }, 300);
+
+    // Caso queira reabilitar o botão se não redirecionar (fallback)
+    setTimeout(() => {
+        if (!document.hidden) {
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        }
+    }, 5000);
 }
 
 // Scroll para o formulário
