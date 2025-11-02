@@ -160,6 +160,90 @@
                 <p class="testimonial-author">– Sarah P., Peabody MA</p>
             </div>
 
+            <!-- VIDEOS - See Our Mobile Showroom in Action -->
+            <div class="videos-showcase">
+                <h2 class="section-title centered white-text">See Our Mobile Showroom in Action</h2>
+                
+                <!-- MOBILE VERSION - Carousel -->
+                <div class="video-carousel-wrapper mobile-only">
+                    <div class="video-frame">
+                        <div class="video-container active" data-video-index="0">
+                            <video class="carousel-video" preload="metadata" playsinline>
+                                <source src="BLOCO 4 - VIDEOS/1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <button type="button" class="video-overlay" onclick="toggleMobileVideo(0)">
+                                <span class="play-button">▶</span>
+                            </button>
+                        </div>
+                        <div class="video-container" data-video-index="1">
+                            <video class="carousel-video" preload="metadata" playsinline>
+                                <source src="BLOCO 4 - VIDEOS/2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <button type="button" class="video-overlay" onclick="toggleMobileVideo(1)">
+                                <span class="play-button">▶</span>
+                            </button>
+                        </div>
+                        <div class="video-container" data-video-index="2">
+                            <video class="carousel-video" preload="metadata" playsinline>
+                                <source src="BLOCO 4 - VIDEOS/3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <button type="button" class="video-overlay" onclick="toggleMobileVideo(2)">
+                                <span class="play-button">▶</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="video-navigation">
+                        <button class="nav-btn prev" onclick="changeVideo(-1)">‹</button>
+                        <button class="nav-btn next" onclick="changeVideo(1)">›</button>
+                    </div>
+                    <div class="video-dots">
+                        <span class="dot active" onclick="currentVideo(1)"></span>
+                        <span class="dot" onclick="currentVideo(2)"></span>
+                        <span class="dot" onclick="currentVideo(3)"></span>
+                    </div>
+                </div>
+                
+                <!-- DESKTOP VERSION - 3 Separate Videos -->
+                <div class="desktop-videos-grid desktop-only">
+                    <div class="desktop-video-item">
+                        <div class="desktop-video-container">
+                            <video class="desktop-video" preload="metadata" playsinline>
+                                <source src="BLOCO 4 - VIDEOS/1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <button type="button" class="desktop-video-overlay" onclick="toggleDesktopVideo(0)">
+                                <span class="desktop-play-button">▶</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="desktop-video-item">
+                        <div class="desktop-video-container">
+                            <video class="desktop-video" preload="metadata" playsinline>
+                                <source src="BLOCO 4 - VIDEOS/2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <button type="button" class="desktop-video-overlay" onclick="toggleDesktopVideo(1)">
+                                <span class="desktop-play-button">▶</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="desktop-video-item">
+                        <div class="desktop-video-container">
+                            <video class="desktop-video" preload="metadata" playsinline>
+                                <source src="BLOCO 4 - VIDEOS/3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <button type="button" class="desktop-video-overlay" onclick="toggleDesktopVideo(2)">
+                                <span class="desktop-play-button">▶</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Google Reviews Section -->
             <div class="google-reviews">
                 <div class="reviews-header">
@@ -223,92 +307,6 @@
 
             <div class="cta-center">
                 <button class="cta-button products-cta" onclick="scrollToForm()">Book Your Free In-Home Consultation</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- BLOCO 4 - VIDEOS SECTION -->
-    <section class="videos-section" id="videos">
-        <div class="container">
-            <h2 class="section-title centered white-text">See Our Mobile Showroom in Action</h2>
-            
-            <!-- MOBILE VERSION - Carousel -->
-            <div class="video-carousel-wrapper mobile-only">
-                <div class="video-frame">
-                    <div class="video-container active" data-video-index="0">
-                        <video class="carousel-video" preload="metadata" playsinline>
-                            <source src="BLOCO 4 - VIDEOS/1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <button type="button" class="video-overlay" onclick="toggleMobileVideo(0)">
-                            <span class="play-button">▶</span>
-                        </button>
-                    </div>
-                    <div class="video-container" data-video-index="1">
-                        <video class="carousel-video" preload="metadata" playsinline>
-                            <source src="BLOCO 4 - VIDEOS/2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <button type="button" class="video-overlay" onclick="toggleMobileVideo(1)">
-                            <span class="play-button">▶</span>
-                        </button>
-                    </div>
-                    <div class="video-container" data-video-index="2">
-                        <video class="carousel-video" preload="metadata" playsinline>
-                            <source src="BLOCO 4 - VIDEOS/3.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <button type="button" class="video-overlay" onclick="toggleMobileVideo(2)">
-                            <span class="play-button">▶</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="video-navigation">
-                    <button class="nav-btn prev" onclick="changeVideo(-1)">‹</button>
-                    <button class="nav-btn next" onclick="changeVideo(1)">›</button>
-                </div>
-                <div class="video-dots">
-                    <span class="dot active" onclick="currentVideo(1)"></span>
-                    <span class="dot" onclick="currentVideo(2)"></span>
-                    <span class="dot" onclick="currentVideo(3)"></span>
-                </div>
-            </div>
-            
-            <!-- DESKTOP VERSION - 3 Separate Videos -->
-            <div class="desktop-videos-grid desktop-only">
-                <div class="desktop-video-item">
-                    <div class="desktop-video-container">
-                        <video class="desktop-video" preload="metadata" playsinline>
-                            <source src="BLOCO 4 - VIDEOS/1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <button type="button" class="desktop-video-overlay" onclick="toggleDesktopVideo(0)">
-                            <span class="desktop-play-button">▶</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="desktop-video-item">
-                    <div class="desktop-video-container">
-                        <video class="desktop-video" preload="metadata" playsinline>
-                            <source src="BLOCO 4 - VIDEOS/2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <button type="button" class="desktop-video-overlay" onclick="toggleDesktopVideo(1)">
-                            <span class="desktop-play-button">▶</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="desktop-video-item">
-                    <div class="desktop-video-container">
-                        <video class="desktop-video" preload="metadata" playsinline>
-                            <source src="BLOCO 4 - VIDEOS/3.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <button type="button" class="desktop-video-overlay" onclick="toggleDesktopVideo(2)">
-                            <span class="desktop-play-button">▶</span>
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -410,6 +408,17 @@
             <p class="footer-contact">📞 Call for immediate assistance | 📧 Email us for quotes</p>
         </div>
     </footer>
+
+    <!-- Floating Phone Widget -->
+    <div class="phone-widget" id="phoneWidget">
+        <a href="#contact-form" class="phone-widget-button" id="phoneWidgetBtn" onclick="scrollToForm(); return false;">
+            📞
+        </a>
+        <div class="phone-widget-popup" id="phoneWidgetPopup">
+            <button class="popup-close" id="popupClose">×</button>
+            <p class="popup-text">Call us now!</p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

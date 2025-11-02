@@ -14,7 +14,47 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeForm();
     initializeScrollEffects();
     initializeTypewriter();
+    initializePhoneWidget();
 });
+
+// Phone Widget
+function initializePhoneWidget() {
+    const popup = document.getElementById('phoneWidgetPopup');
+    const closeBtn = document.getElementById('popupClose');
+    
+    if (!popup || !closeBtn) return;
+    
+    // Show popup after 8 seconds
+    setTimeout(() => {
+        popup.classList.add('show');
+        
+        // Auto-hide popup after 5 seconds
+        setTimeout(() => {
+            popup.classList.remove('show');
+        }, 5000);
+    }, 8000);
+    
+    // Close popup on button click
+    closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        popup.classList.remove('show');
+    });
+    
+    // Show popup again on widget button hover (optional UX enhancement)
+    const widgetBtn = document.getElementById('phoneWidgetBtn');
+    if (widgetBtn) {
+        widgetBtn.addEventListener('mouseenter', () => {
+            popup.classList.add('show');
+        });
+        
+        widgetBtn.addEventListener('mouseleave', () => {
+            setTimeout(() => {
+                popup.classList.remove('show');
+            }, 2000);
+        });
+    }
+}
 
 // Typewriter Animation
 function initializeTypewriter() {
