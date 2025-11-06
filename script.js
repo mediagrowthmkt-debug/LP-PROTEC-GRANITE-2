@@ -499,6 +499,12 @@ async function submitForm() {
     };
 
     // Metadados da página (fonte/link)
+    // Inferir fonte automática via path caso não haja UTM explícito
+    const path = window.location.pathname.toLowerCase();
+    let inferredSource = 'direct';
+    if (path.includes('/google')) inferredSource = 'google';
+    else if (path.includes('/meta')) inferredSource = 'meta';
+
     const pageMeta = {
         page_url: window.location.href,
         page_path: window.location.pathname + window.location.search,
@@ -507,9 +513,9 @@ async function submitForm() {
         user_agent: navigator.userAgent,
         timestamp: new Date().toISOString(),
         source: 'Landing Page - Premium Granite',
-        utm_source: getUrlParameter('utm_source') || 'direct',
+        utm_source: getUrlParameter('utm_source') || inferredSource,
         utm_medium: getUrlParameter('utm_medium') || 'website',
-        utm_campaign: getUrlParameter('utm_campaign') || 'granite-landing'
+        utm_campaign: getUrlParameter('utm_campaign') || (inferredSource !== 'direct' ? inferredSource + '-campaign' : 'granite-landing')
     };
 
     const payload = { ...formData, ...pageMeta };
